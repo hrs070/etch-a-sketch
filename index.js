@@ -7,6 +7,13 @@ const btnRGB = document.createElement("button");
 const btnSize = document.createElement("button");
 const btnReset = document.createElement("button");
 
+window.onload = () => { //this function auto selects black on window load
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => box.addEventListener("mouseover", () => {
+        box.style.backgroundColor = "black";
+    }))
+}
+
 function createDivs(cols, rows) {
     for (let i = 0; i < (cols * rows); i++) {
         const div = document.createElement("div");
